@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import UIKit
 
-class BeginViewController: UIViewController {
+class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
