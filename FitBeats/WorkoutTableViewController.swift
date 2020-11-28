@@ -8,10 +8,10 @@
 import CoreData
 import UIKit
 
-class WorkoutTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class WorkoutTableViewController: UITableViewController {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var workoutArray = [Workout]()
+    var workouts = [Workout]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +27,14 @@ class WorkoutTableViewController: UIViewController, UITableViewDataSource, UITab
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return categoryArray.count
+            return workouts.count
         }
         return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
-        let category = categoryArray[indexPath.row]
+        let category = workouts[indexPath.row]
         cell.textLabel?.text = category.name
         
         return cell
@@ -52,8 +52,8 @@ class WorkoutTableViewController: UIViewController, UITableViewDataSource, UITab
             
             // we first want to delete the Category at indexPath.row from our context
             // then later... we want to save our context so the deletion persists
-            context.delete(categoryArray[indexPath.row])
-            categoryArray.remove(at: indexPath.row)
+            context.delete(workouts[indexPath.row])
+            workouts.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             // make the deletion persist
@@ -62,8 +62,8 @@ class WorkoutTableViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let category = categoryArray.remove(at: sourceIndexPath.row)
-        categoryArray.insert(category, at: destinationIndexPath.row)
+        let category = workouts.remove(at: sourceIndexPath.row)
+        workouts.insert(category, at: destinationIndexPath.row)
         tableView.reloadData()
     }
 
@@ -81,9 +81,9 @@ class WorkoutTableViewController: UIViewController, UITableViewDataSource, UITab
             let text = alertTextField.text!
             // CREATE
             // make a Category using context
-            let newCategory = Category(context: self.context)
+            let newCategory = Workout(context: self.context)
             newCategory.name = text
-            self.categoryArray.append(newCategory)
+            self.workouts.append(newCategory)
             self.saveCategories()
         }
         
@@ -92,7 +92,7 @@ class WorkoutTableViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier, identifier == "ShowItemsSegue"  {
+        /*if let identifier = segue.identifier, identifier == "ShowItemsSegue"  {
             
             guard let itemsTableVC = segue.destination as? ItemsTableViewController else {
                 return
@@ -102,9 +102,9 @@ class WorkoutTableViewController: UIViewController, UITableViewDataSource, UITab
                 return
             }
             
-            let category = categoryArray[selectedIndexPath.row]
+            let category = workouts[selectedIndexPath.row]
             itemsTableVC.category = category
-        }
+        }*/
     }
     
     func saveCategories() {
@@ -121,12 +121,12 @@ class WorkoutTableViewController: UIViewController, UITableViewDataSource, UITab
     // READ of CRUD
     func loadCategories() {
         // we need to "request" the categories from the database (using the persistent container's context
-        let request: NSFetchRequest<Category> = Category.fetchRequest()
+        let request: NSFetchRequest<Workout> = Workout.fetchRequest()
         // when you execute a SQL SELECT statement, you usually filter the rows you want back in your query using a WHERE clause
         // to do this with core data, we use a "predicate" and attach it to our request
         // for categories, we want all rows in the category table, so we don't need to filter, but we will for items later...
         do {
-            categoryArray = try context.fetch(request)
+            workouts = try context.fetch(request)
         }
         catch {
             print("Error loading categories \(error)")

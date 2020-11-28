@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,21 +32,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFU-sV-6KW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFU-sV-6KW">
                                 <rect key="frame" x="50" y="782" width="115" height="30"/>
                                 <state key="normal" title="Change Workout"/>
                                 <connections>
                                     <segue destination="TUw-Ku-qCc" kind="show" identifier="" id="4fP-sf-45x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWu-tb-dbS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWu-tb-dbS">
                                 <rect key="frame" x="266" y="782" width="98" height="30"/>
                                 <state key="normal" title="Change Music"/>
                                 <connections>
                                     <segue destination="2bt-lG-XQs" kind="show" id="OdP-e7-2N8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-Gd-x7Z">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-Gd-x7Z">
                                 <rect key="frame" x="159" y="433" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start Workout"/>
@@ -54,14 +55,14 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TWu-tb-dbS" secondAttribute="bottom" constant="50" id="AIy-bL-emU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fFU-sV-6KW" secondAttribute="bottom" constant="50" id="kcB-nm-hIy"/>
                             <constraint firstItem="fFU-sV-6KW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="tFV-PS-Xds"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TWu-tb-dbS" secondAttribute="trailing" constant="50" id="zJA-ne-BYI"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="f12-uq-Zrr"/>
                 </viewController>
@@ -69,21 +70,47 @@
             </objects>
             <point key="canvasLocation" x="139" y="113"/>
         </scene>
-        <!--Workout View Controller-->
+        <!--Workout Table View Controller-->
         <scene sceneID="B6M-Od-dir">
             <objects>
-                <viewController id="TUw-Ku-qCc" customClass="WorkoutViewController" customModule="FitBeats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TUw-Ku-qCc" customClass="WorkoutTableViewController" customModule="FitBeats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QFv-oE-vMy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a0a-Xd-702">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="d93-id-uof">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d93-id-uof" id="zFQ-f6-1bC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="TUw-Ku-qCc" id="cPc-gK-ET9"/>
+                                    <outlet property="delegate" destination="TUw-Ku-qCc" id="z8w-5G-qCI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="axJ-7x-MI5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a0a-Xd-702" firstAttribute="top" secondItem="axJ-7x-MI5" secondAttribute="top" id="0ds-zc-jMq"/>
+                            <constraint firstItem="a0a-Xd-702" firstAttribute="leading" secondItem="axJ-7x-MI5" secondAttribute="leading" id="N2d-aT-eTX"/>
+                            <constraint firstItem="axJ-7x-MI5" firstAttribute="trailing" secondItem="a0a-Xd-702" secondAttribute="trailing" id="QdC-ld-JDt"/>
+                            <constraint firstItem="axJ-7x-MI5" firstAttribute="bottom" secondItem="a0a-Xd-702" secondAttribute="bottom" id="cY9-GM-21P"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HBU-9i-Joi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lap-HJ-zDu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-600" y="677"/>
+            <point key="canvasLocation" x="-574" y="828"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="WqA-tC-XBK">
@@ -92,14 +119,14 @@
                     <view key="view" contentMode="scaleToFill" id="3os-M7-S0c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Nbq-8B-s6b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="o5C-mn-PBH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdY-Yq-Gsb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1193" y="113"/>
+            <point key="canvasLocation" x="1246" y="113"/>
         </scene>
         <!--Music View Controller-->
         <scene sceneID="KTB-pT-SSU">
@@ -108,8 +135,8 @@
                     <view key="view" contentMode="scaleToFill" id="XOj-5U-jMb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0cN-Sh-avA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="7Iz-Lb-3Bz"/>
                 </viewController>
@@ -118,4 +145,9 @@
             <point key="canvasLocation" x="917" y="829"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
