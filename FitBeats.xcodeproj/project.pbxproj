@@ -29,9 +29,10 @@
 		7C63DB1B2571CE6C007F5006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C63DB1E2571CE6C007F5006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C63DB202571CE6C007F5006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB0F51B22571D66400E5285F /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
-		AB0F51B42571D6FE00E5285F /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
-		AB0F51B62571D72000E5285F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		7C63DB272571D63E007F5006 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		7C63DB282571D63E007F5006 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		7C63DB292571D63E007F5006 /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		7C63DB2A2571D63E007F5006 /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,10 @@
 		7C63DB0E2571CE6A007F5006 /* FitBeats */ = {
 			isa = PBXGroup;
 			children = (
+				7C63DB272571D63E007F5006 /* Workout+CoreDataClass.swift */,
+				7C63DB282571D63E007F5006 /* Workout+CoreDataProperties.swift */,
+				7C63DB292571D63E007F5006 /* Exercise+CoreDataClass.swift */,
+				7C63DB2A2571D63E007F5006 /* Exercise+CoreDataProperties.swift */,
 				7C63DB0F2571CE6A007F5006 /* AppDelegate.swift */,
 				7C63DB112571CE6A007F5006 /* SceneDelegate.swift */,
 				7C63DB132571CE6A007F5006 /* MainViewController.swift */,
@@ -149,9 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB0F51B52571D6FE00E5285F /* MusicViewController.swift in Sources */,
-				AB0F51B72571D72000E5285F /* StartViewController.swift in Sources */,
-				7C63DB142571CE6A007F5006 /* MainViewController.swift in Sources */,
+				7C63DB2C2571D63E007F5006 /* Workout+CoreDataProperties.swift in Sources */,
+				7C63DB142571CE6A007F5006 /* ViewController.swift in Sources */,
+				7C63DB2B2571D63E007F5006 /* Workout+CoreDataClass.swift in Sources */,
+				7C63DB2D2571D63E007F5006 /* Exercise+CoreDataClass.swift in Sources */,
 				7C63DB102571CE6A007F5006 /* AppDelegate.swift in Sources */,
 				AB0F51B32571D66400E5285F /* WorkoutViewController.swift in Sources */,
 				7C63DB122571CE6A007F5006 /* SceneDelegate.swift in Sources */,
