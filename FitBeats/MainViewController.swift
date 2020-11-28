@@ -15,5 +15,18 @@ class MainViewController: UIViewController {
     }
 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //if there is a valid identifier
+        if let identifier = segue.identifier  {
+            //and it is the appropriate segue for the detail screen
+            if identifier == "BeginWorkoutSegue" {
+    
+            } else if identifier == "ChangeMusicSegue" {
+
+            } else if identifier == "ChangeWorkoutSegue" {
+                
+            }
+        }
+    }
 }
 

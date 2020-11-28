@@ -31,35 +31,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFU-sV-6KW">
-                                <rect key="frame" x="50" y="782" width="115" height="30"/>
-                                <state key="normal" title="Change Workout"/>
-                                <connections>
-                                    <segue destination="TUw-Ku-qCc" kind="show" identifier="" id="4fP-sf-45x"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWu-tb-dbS">
-                                <rect key="frame" x="266" y="782" width="98" height="30"/>
-                                <state key="normal" title="Change Music"/>
-                                <connections>
-                                    <segue destination="2bt-lG-XQs" kind="show" id="OdP-e7-2N8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-Gd-x7Z">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="101" translatesAutoresizingMaskIntoConstraints="NO" id="pIp-De-FaH">
+                                <rect key="frame" x="50" y="782" width="314" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFU-sV-6KW">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
+                                        <state key="normal" title="Change Workout"/>
+                                        <connections>
+                                            <segue destination="TUw-Ku-qCc" kind="show" identifier="ChangeWorkoutSegue" id="4fP-sf-45x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWu-tb-dbS">
+                                        <rect key="frame" x="216" y="0.0" width="98" height="30"/>
+                                        <state key="normal" title="Change Music"/>
+                                        <connections>
+                                            <segue destination="2bt-lG-XQs" kind="show" identifier="ChangeMusicSegue" id="OdP-e7-2N8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-Gd-x7Z">
                                 <rect key="frame" x="159" y="433" width="96" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start Workout"/>
                                 <connections>
-                                    <segue destination="nuR-mw-um5" kind="show" id="V8E-0u-5mf"/>
+                                    <segue destination="nuR-mw-um5" kind="show" identifier="BeginWorkoutSegue" id="V8E-0u-5mf"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TWu-tb-dbS" secondAttribute="bottom" constant="50" id="AIy-bL-emU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fFU-sV-6KW" secondAttribute="bottom" constant="50" id="kcB-nm-hIy"/>
-                            <constraint firstItem="fFU-sV-6KW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="tFV-PS-Xds"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TWu-tb-dbS" secondAttribute="trailing" constant="50" id="zJA-ne-BYI"/>
+                            <constraint firstItem="j5r-Gd-x7Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="02n-Yj-GOP"/>
+                            <constraint firstItem="j5r-Gd-x7Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bCf-LD-RqQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
