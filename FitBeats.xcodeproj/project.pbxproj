@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		7C63DB102571CE6A007F5006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C63DB0F2571CE6A007F5006 /* AppDelegate.swift */; };
 		7C63DB122571CE6A007F5006 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C63DB112571CE6A007F5006 /* SceneDelegate.swift */; };
-		7C63DB142571CE6A007F5006 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C63DB132571CE6A007F5006 /* ViewController.swift */; };
+		7C63DB142571CE6A007F5006 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C63DB132571CE6A007F5006 /* MainViewController.swift */; };
 		7C63DB172571CE6A007F5006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C63DB152571CE6A007F5006 /* Main.storyboard */; };
 		7C63DB1A2571CE6A007F5006 /* FitBeats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C63DB182571CE6A007F5006 /* FitBeats.xcdatamodeld */; };
 		7C63DB1C2571CE6C007F5006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C63DB1B2571CE6C007F5006 /* Assets.xcassets */; };
 		7C63DB1F2571CE6C007F5006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C63DB1D2571CE6C007F5006 /* LaunchScreen.storyboard */; };
+		AB0F51B32571D66400E5285F /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F51B22571D66400E5285F /* WorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7C63DB0C2571CE6A007F5006 /* FitBeats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitBeats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C63DB0F2571CE6A007F5006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C63DB112571CE6A007F5006 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7C63DB132571CE6A007F5006 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7C63DB132571CE6A007F5006 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7C63DB162571CE6A007F5006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C63DB192571CE6A007F5006 /* FitBeats.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitBeats.xcdatamodel; sourceTree = "<group>"; };
 		7C63DB1B2571CE6C007F5006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C63DB1E2571CE6C007F5006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C63DB202571CE6C007F5006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB0F51B22571D66400E5285F /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,9 @@
 			children = (
 				7C63DB0F2571CE6A007F5006 /* AppDelegate.swift */,
 				7C63DB112571CE6A007F5006 /* SceneDelegate.swift */,
-				7C63DB132571CE6A007F5006 /* ViewController.swift */,
+				7C63DB132571CE6A007F5006 /* MainViewController.swift */,
 				7C63DB152571CE6A007F5006 /* Main.storyboard */,
+				AB0F51B22571D66400E5285F /* WorkoutViewController.swift */,
 				7C63DB1B2571CE6C007F5006 /* Assets.xcassets */,
 				7C63DB1D2571CE6C007F5006 /* LaunchScreen.storyboard */,
 				7C63DB202571CE6C007F5006 /* Info.plist */,
@@ -140,8 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C63DB142571CE6A007F5006 /* ViewController.swift in Sources */,
+				7C63DB142571CE6A007F5006 /* MainViewController.swift in Sources */,
 				7C63DB102571CE6A007F5006 /* AppDelegate.swift in Sources */,
+				AB0F51B32571D66400E5285F /* WorkoutViewController.swift in Sources */,
 				7C63DB122571CE6A007F5006 /* SceneDelegate.swift in Sources */,
 				7C63DB1A2571CE6A007F5006 /* FitBeats.xcdatamodeld in Sources */,
 			);

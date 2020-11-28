@@ -1,13 +1,15 @@
 //
-//  ViewController.swift
+//  WorkoutViewController.swift
 //  FitBeats
 //
-//  Created by Adrian Rabadam on 11/27/20.
+//  Created by Dillon Shipley on 11/27/20.
 //
+
+import Foundation
 
 import UIKit
 
-class ViewController: UIViewController {
+class WorkoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,4 +18,3 @@ class ViewController: UIViewController {
 
 
 }
-
